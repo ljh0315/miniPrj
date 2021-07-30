@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>triup</display-name>
+  <servlet>
+    <servlet-name>MainServlet</servlet-name>
+    <servlet-class>sl063.web.MainServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>MainServlet</servlet-name>
+    <url-pattern>/mainController</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ProductServlet</servlet-name>
+    <servlet-class>controller.ProductServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ProductServlet</servlet-name>
+    <url-pattern>/productController</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MemberServlet</servlet-name>
+    <servlet-class>controller.MemberServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>BoardServlet</servlet-name>
+    <servlet-class>controller.BoardServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>QnAServlet</servlet-name>
+    <servlet-class>controller.QnAServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>SearchServlet</servlet-name>
+    <servlet-class>controller.SearchServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>MemberServlet</servlet-name>
+    <url-pattern>/memberController</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>BoardServlet</servlet-name>
+    <url-pattern>/boardController</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>QnAServlet</servlet-name>
+    <url-pattern>/qnaController</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>SearchServlet</servlet-name>
+    <url-pattern>/searchController</url-pattern>
+  </servlet-mapping>
+  
+  
+  <resource-ref>
+    <description>Oracle Datasource example</description>
+    <res-ref-name>jdbc/mallDB</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+</web-app>
